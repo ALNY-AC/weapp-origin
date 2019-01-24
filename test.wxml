@@ -1,0 +1,14 @@
+<!-- 选择器，bindchange事件绑定到 o-model 上 -->
+<picker mode="date" value="{{form.date}}" bindchange="o-model" data-model="form.date">
+    <input value='{{form.date}}' disabled placeholder='请选择'></input>
+</picker>
+<!-- 直接输入，在控制台查看变化 -->
+<textarea maxlength="-1" bindinput="o-model" data-model="form.info" cursor-spacing="100rpx"></textarea>
+<view>{{form.info}}</view>
+<!-- 点击后会切换显示 -->
+<button bindtap="o-model" data-model="isShow" data-value="{{isShow?false:true}}">{{isShow}}</button>
+<view wx:if="{{isShow}}">Hello Word</view>
+<!-- 值发生变化后调用函数，可以使用watch或使用data-methods -->
+<picker mode="date" value="{{form.date}}" bindchange="o-model" data-methods="update" data-model="form.date">
+</picker>
+
