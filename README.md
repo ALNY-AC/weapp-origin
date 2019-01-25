@@ -1,6 +1,7 @@
 # weapp-origin 小程序轻量级渐进式框架 
 > v0.1
 ## 功能
+* 直接在小程序内使用，无需使用构建工具。
 * 无需js处理的，表单双向绑定。
 * 在任何地方都可以获取url参数`this.$router.query`，抛弃 `onLoad()` 。
 * 简洁的http请求：`this.$http.post()`。
